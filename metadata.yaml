@@ -1,0 +1,5 @@
+homepage: "https://www.datareporter.eu"
+documentation: "https://help.datareporter.eu/docs/webcare"
+versions:
+  - sha: 
+    changeNotes: Initial release.
