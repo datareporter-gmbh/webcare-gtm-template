@@ -5,3 +5,5 @@ versions:
     changeNotes: Initial release.
   - sha: d628aa165a95fec6aa642c9bf7f9df42571dfa39
     changeNotes: Fixed a bug with cookie array values
+  - sha: f983e532d01a492511e5633dec19b274a877ba27
+    changeNotes: Small bugfixes
