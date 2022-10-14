@@ -104,9 +104,9 @@ const getCookieValues = require('getCookieValues');
 const callInWindow = require('callInWindow');
 const gtagSet = require('gtagSet');
 const injectScript = require('injectScript');
+
 const cookieNameMode = 'cookieconsent_mode';
 const cookieNameStatus = 'cookieconsent_status';
-
 
 
 /**
@@ -160,6 +160,19 @@ const onUserConsent = (consent) => {
 
 
 
+const getCookieValue = (cvalue) => {
+  if (cvalue) {
+    if (typeof(cvalue) !== "string") {
+      if (cvalue.length > 0) {
+        return cvalue[0];
+      }
+    } else {
+      return "" + cvalue; 
+    }
+  }
+  return "";
+};
+
 
 /**
  * Executes the default command, sets the developer ID, and sets up the consent
@@ -194,21 +207,21 @@ const main = (data) => {
   if (data.test === true) {
   
     if (data.cookieconsent_status) {
-      userCookieStatus = data.cookieconsent_status; 
+      userCookieStatus = getCookieValue(data.cookieconsent_status); 
     }
     if (data.cookieconsent_mode) {
-      userCookieMode = data.cookieconsent_mode; 
+      userCookieMode = getCookieValue(data.cookieconsent_mode); 
     }
   
   } else {
-    userCookieStatus = getCookieValues(cookieNameStatus);
-    userCookieMode = getCookieValues(cookieNameMode);
+    userCookieStatus = getCookieValue(getCookieValues(cookieNameStatus));
+    userCookieMode = getCookieValue(getCookieValues(cookieNameMode));
   }
   
   log("Cookie Status: " + userCookieStatus);
   log("Cookie Mode: " + userCookieMode);
   
-  if (userCookieStatus == 'allow') {
+  if (userCookieStatus === 'allow') {
   	const updateData = {
       adConsentGranted: true,
       analyticsConsentGranted: true,
