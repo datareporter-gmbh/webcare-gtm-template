@@ -144,14 +144,14 @@ const parseCommandData = (settings) => {
  */
 const onUserConsent = (consent) => {
   const consentModeStates = {
-    ad_storage: consent['adConsentGranted'] ? 'granted' : 'denied',
-    analytics_storage: consent['analyticsConsentGranted'] ? 'granted' :
+    'ad_storage': consent['adConsentGranted'] ? 'granted' : 'denied',
+    'analytics_storage': consent['analyticsConsentGranted'] ? 'granted' :
                                                             'denied',
-    functionality_storage: consent['functionalityConsentGranted'] ? 'granted' :
+    'functionality_storage': consent['functionalityConsentGranted'] ? 'granted' :
                                                                     'denied',
-    personalization_storage:
+    'personalization_storage':
         consent['personalizationConsentGranted'] ? 'granted' : 'denied',
-    security_storage: consent['securityConsentGranted'] ? 'granted' : 'denied',
+    'security_storage': consent['securityConsentGranted'] ? 'granted' : 'denied',
   };
   updateConsentState(consentModeStates);
   log(consentModeStates);
@@ -218,8 +218,8 @@ const main = (data) => {
     userCookieMode = getCookieValue(getCookieValues(cookieNameMode));
   }
   
-  log("Cookie Status: " + userCookieStatus);
-  log("Cookie Mode: " + userCookieMode);
+  //log("Cookie Status: " + userCookieStatus);
+  //log("Cookie Mode: " + userCookieMode);
   
   if (userCookieStatus === 'allow') {
   	const updateData = {
@@ -251,6 +251,7 @@ const main = (data) => {
       securityConsentGranted: defMarketing | defStatistic
     };
    
+    
     testResult.updateData = onUserConsent(updateData);
   }
   
