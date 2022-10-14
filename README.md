@@ -17,7 +17,7 @@ Google Consent Mode is automatically supported by WebCare CMP when you use our t
 
 # Installation
 
-Just add this tag with trigger "All Pages" to your GTM configuration,
+Just add this tag with trigger "Consent Initialization - All Pages" to your GTM configuration,
 copy your license key into the "WebCare CMP Id" field and you are ready to go.
 
 
