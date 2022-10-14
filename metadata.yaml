@@ -3,3 +3,5 @@ documentation: "https://help.datareporter.eu/docs/webcare"
 versions:
   - sha: 05f5bc4f635330e997468f1f0e93ac6ac120d78b
     changeNotes: Initial release.
+  - sha: d628aa165a95fec6aa642c9bf7f9df42571dfa39
+    changeNotes: Fixed a bug with cookie array values
