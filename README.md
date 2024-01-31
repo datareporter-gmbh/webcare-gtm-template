@@ -12,7 +12,7 @@ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.XXXXXXXXXXXX.XXX
 
 You'll find this key in the integration section of your WebCare license.
 
-Google Consent Mode is automatically supported by WebCare CMP when you use our template.
+Google Consent Mode v2 is automatically supported by WebCare CMP.
 
 
 # Installation
@@ -23,6 +23,6 @@ copy your license key into the "WebCare CMP Id" field and you are ready to go.
 
 # About
 
-(c) 2022 DataReporter GmbH, https://www.datareporter.eu
+(c) 2024 Datareporter GmbH, https://www.datareporter.eu
 
 
