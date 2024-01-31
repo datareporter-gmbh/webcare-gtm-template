@@ -1,6 +1,8 @@
 homepage: "https://www.datareporter.eu"
 documentation: "https://help.datareporter.eu/docs/webcare"
 versions:
+  - sha: e53b8b35a84062129e27de5f30356ac8cc37cfac
+    changeNotes: Google Consent Mode v2 implemented
   - sha: f983e532d01a492511e5633dec19b274a877ba27
     changeNotes: Small bugfixes
   - sha: d628aa165a95fec6aa642c9bf7f9df42571dfa39
